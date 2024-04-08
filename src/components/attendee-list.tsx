@@ -98,7 +98,8 @@ export function AttendeeList(){
                 <tfoot>
                     <tr>
                         <TableCell colSpan={3}>
-                            Mostrando 10 de {attendees.length} itens
+                            Mostrando {page === totalPages
+                             ? totalPages % 10 : 10} de {attendees.length} itens
                         </TableCell>
 
                         <TableCell colSpan={3} className='text-right'>
